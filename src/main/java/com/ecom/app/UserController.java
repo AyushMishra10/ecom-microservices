@@ -26,7 +26,6 @@ public class UserController {
     @GetMapping("/api/users")
     public ResponseEntity<List<User>> getAllUsers() {
     	return new ResponseEntity<>(userService.fetchAllUsers(), HttpStatus.OK);
-//        return userService.fetchAllUsers(); 
     }
     @GetMapping("/api/{id}")
     public ResponseEntity<User> getUser(@PathVariable Long id) {
